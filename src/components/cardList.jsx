@@ -11,38 +11,35 @@ const CardList = () => {
     {
       id: 1,
       name: "Card one",
-      text:
-        "This is a wider card with supporting text below as a natural lead-in to additional content.",
+      role: "student",
+      school: "Hogwarts School of Witchcraft and Wizardry.",
     },
     {
       id: 2,
       name: "Card two",
-      text:
-        "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+      role: "Head, Department of International Magical Cooperation",
     },
     {
       id: 3,
       name: "Card three",
-      text:
-        "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action....This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+      role: "Auror",
     },
     {
       id: 4,
       name: "Card four",
-      text:
-        "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+      role: "student",
+      school: "Beauxbatons Academy of Magic",
     },
     {
       id: 5,
       name: "Card five",
-      text:
-        "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+      role:
+        "Employee, Department for the Regulation and Control of Magical Creatures",
     },
     {
       id: 6,
       name: "Card six",
-      text:
-        "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+      role: "Head, Department of International Magical Cooperation",
     },
   ];
   return (
@@ -50,11 +47,13 @@ const CardList = () => {
       <HeaderTitle viewName="Characters"></HeaderTitle>
       <CardColumns>
         {items.map((item) => (
-          <Card key={item.id} className="mt-3 shadow">
-            <Card.Header>Featured</Card.Header>
+          <Card key={item.id} className="shadow">
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
-              <Card.Text>{item.text}</Card.Text>
+              <Card.Subtitle className="mb-2 text-muted">
+                {item.role}
+              </Card.Subtitle>
+              {item.school && <Card.Text>{item.school}</Card.Text>}
               <Button variant="outline-dark" size="sm" block>
                 See more
               </Button>
@@ -62,6 +61,7 @@ const CardList = () => {
           </Card>
         ))}
       </CardColumns>
+      <HeaderTitle viewName="Characters"></HeaderTitle>
     </React.Fragment>
   );
 };

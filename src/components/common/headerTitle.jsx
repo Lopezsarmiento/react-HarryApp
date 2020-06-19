@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 const HeaderTitle = (props) => {
   return (
     <Navbar className="">
-      <Navbar.Brand>Characters</Navbar.Brand>
+      <Navbar.Brand>{props.viewName}</Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
