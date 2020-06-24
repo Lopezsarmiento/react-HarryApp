@@ -1,5 +1,5 @@
 .boxcontainer {
-  border-radius: 2%;
+  border-radius: 20px;
 }
 
 .bgcard {
@@ -15,5 +15,10 @@
 }
 
 .round {
-  border-radius: 50%;
+  border-radius: 20px;
+}
+
+.app {
+  background: black;
+  padding: 30px;
 }

@@ -15,7 +15,7 @@ const SortingHat = () => {
   return (
     <React.Fragment>
       <HeaderTitle viewName="Sorting Hat"></HeaderTitle>
-      <Jumbotron className="shadow">
+      <Jumbotron className="shadow round">
         <h1>Hello!</h1>
         <blockquote>
           "Oh you may not think I'm pretty, but don't judge on what you see,
@@ -29,9 +29,15 @@ const SortingHat = () => {
       </Jumbotron>
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title></Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          {" "}
+          Hmm, difficult. VERY difficult. Plenty of courage, I see. Not a bad
+          mind, either. There's talent, oh yes. And a thirst to prove yourself.
+          But where to put you?<br></br>
+          <strong>...GRYFFINDOR!</strong>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
